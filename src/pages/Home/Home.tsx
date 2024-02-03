@@ -60,7 +60,7 @@ const Home: React.FC = () => {
   };
 
   const handleDateSortClicked = () => {
-    if(hackathonList.length > 1){
+    if (hackathonList.length > 1) {
       const sortedList = [...hackathonList].sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
@@ -76,10 +76,13 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <Container fluid>
+      <Row className="bg-info text-white py-2 mb-2">
+        <Col><h1>Hack Ideas</h1></Col>
+      </Row>
       <Row>
         <Col>
-          <h1 className="mb-4">Upcoming Hackathons</h1>
+          <h4 className="mb-4">Hackathons List</h4>
         </Col>
         <Col className="text-end">
           <Button variant="primary" onClick={() => setShowModal(true)}>
@@ -99,14 +102,18 @@ const Home: React.FC = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="d-flex gap-4">
-          <Button onClick={handleSortClicked}>
-            Sort by votes: {sortOrder}
-          </Button>
-          <Button onClick={handleDateSortClicked}>
-            Sort by date : {sortDateOrder}
-          </Button>
-        </Col>
+        {
+          hackathonList.length > 1 && (
+            <Col className="d-flex gap-4">
+              <Button onClick={handleSortClicked}>
+                Sort by votes: {sortOrder}
+              </Button>
+              <Button onClick={handleDateSortClicked}>
+                Sort by date : {sortDateOrder}
+              </Button>
+            </Col>
+          )
+        }
         <ListGroup>
           {hackathonList?.map((hackathon) => (
             <ListGroup.Item
