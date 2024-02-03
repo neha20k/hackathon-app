@@ -1,4 +1,5 @@
 .mainContainer{
-    /* background-image: url("../../assets/bgImages/absolutvision-82TpEld0_e4-unsplash.jpg"); */
+    background-image: url("../../assets/bgImages/absolutvision-82TpEld0_e4-unsplash.jpg");
     background-size: cover;
+    background-position: center;
 }
