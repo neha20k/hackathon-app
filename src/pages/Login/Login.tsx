@@ -22,12 +22,14 @@ const Login: React.FC = () => {
 
   return (
     <Container
+    fluid
       className="d-flex align-items-center justify-content-end mainContainer"
       style={{ minHeight: "100vh" }}
     >
       <Row className="m-4">
         <Col>
           <Card className="p-4">
+            <h3 className="pl-2">Login</h3>
             <Form className="p-4">
               <Form.Group controlId="formEmployeeId">
                 <Form.Label>Employee ID</Form.Label>

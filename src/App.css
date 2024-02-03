@@ -1,0 +1,18 @@
+:root {
+    --border-radius-500: 8px;
+    --color-on-background: #ffffff;
+    --fonts-primary: Karla, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: var(--fonts-primary);
+    font-size: 14px;
+    margin: 0;
+    min-height: 100vh;
+}
