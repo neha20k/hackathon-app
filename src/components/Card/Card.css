@@ -1,0 +1,11 @@
+.buttonStyles{
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color:cornflowerblue;
+    }
+}

@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import { IHackathonCard } from "./interface";
+import "./Card.css"
 
 const HackathonCard: React.FC<IHackathonCard> = ({
   id,
@@ -25,16 +26,14 @@ const HackathonCard: React.FC<IHackathonCard> = ({
   };
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "24rem" }}>
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{desc}</Card.Text>
-        <Card.Text>{date}</Card.Text>
+        <Card.Title>{title.toUpperCase()}</Card.Title>
+        <Card.Subtitle>Description: {desc}</Card.Subtitle>
+        <Card.Text>Date: {date}</Card.Text>
         <Card.Link>{tags}</Card.Link>
-        <Card.Text>
-          <Button onClick={handleVotesClick}>votes</Button> {votes}
-        </Card.Text>
-        <Card.Footer className="d-flex gap-4">
+        <Card.Text onClick={handleVotesClick}><button className="buttonStyles">Click to upvote</button>{" "}{votes}</Card.Text>
+        <Card.Footer className="d-flex justify-content-between">
           <Button variant="primary" type="button" onClick={handleEditClick}>
             Edit
           </Button>
